@@ -1,3 +1,18 @@
+/*
+
+Write a program to read a number and print letter pattern as
+follows?
+
+Input:		Input:
+  3		  5
+Output:		Output:
+A 		A
+BB		BB
+CCC		CCC
+		DDDD 
+		EEEEE
+
+*/
 #include <iostream>
 #include <string>
 
