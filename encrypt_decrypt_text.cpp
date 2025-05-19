@@ -28,7 +28,7 @@ std::string readText(std::string message){
 
 std::string encryptionText (std::string text, int short encryptionKey){
 
-	for(int i = 0; i <= text.length(); ++i){
+	for(int i = 0; i < text.length(); ++i){
 
 	text[i] = char((int)text[i] + encryptionKey);
 		
@@ -40,7 +40,7 @@ std::string encryptionText (std::string text, int short encryptionKey){
 
 std::string decryptionText (std::string text, int short encryptionKey){
 
-	for(int i = 0; i <= text.length(); ++i){
+	for(int i = 0; i < text.length(); ++i){
 
 	text[i] = char((int)text[i] - encryptionKey);
 
