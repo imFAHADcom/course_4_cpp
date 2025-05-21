@@ -12,6 +12,7 @@ output:
 
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 
 int randomNumber(int from, int to){
