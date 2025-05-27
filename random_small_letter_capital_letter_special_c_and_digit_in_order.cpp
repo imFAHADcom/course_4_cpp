@@ -13,6 +13,7 @@ $
 
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 
 enum enCharType{ 
