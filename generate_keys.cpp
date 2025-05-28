@@ -15,13 +15,12 @@ Key [5]: NQCR-PPFJ-KZLF-ZHMT
 */
 
 #include <iostream>
-#include <cstdlib>
 #include <ctime>
+#include <cstdlib>
 #include <string>
 
 
-enum enCharType{ smallLetter = 1, capitalLetter = 2, specialCharacter = 3, digit = 4,};
-
+enum enCharType{smallLetter = 1, capitalLetter = 2, specialCharacter  = 3, digit = 4};
 
 int readPositiveNumber(std::string message){
 
@@ -29,20 +28,17 @@ int readPositiveNumber(std::string message){
 	do{
 		std::cout << message << std::endl;
 		std::cin >> number;
-
 	} while(number < 0);
 
 	return number;
 }
 
 
+int randomNumber(short int from, short int to){
 
-int randNumber(int short from, int short to){
+	int randomNum = rand() % (to - from + 1) + from;
 
-	int randNum = rand() % (to - from + 1) + from;
-
-	return randNum;
-
+	return randomNum;
 }
 
 
@@ -50,71 +46,74 @@ char getRandomCharacter(enCharType charType){
 
 	switch(charType){
 		case enCharType::smallLetter:{
-			return char(randNumber(61, 122));
+			return char(randomNumber(97, 122));
 			break;
 		}
 
 		case enCharType::capitalLetter:{
-			return char(randNumber(65, 90));
+			return char(randomNumber(65, 90));
 			break;
 		}
 
 		case enCharType::specialCharacter:{
-			return char(randNumber(33, 47));
+			return char(randomNumber(33, 47));
 			break;
 		}
+
 		case enCharType::digit:{
-			return char(randNumber(48, 57));
+			return char(randomNumber(48, 57));
 			break;
 		}
 	}
-
 
 	return 0;
 }
 
 
-std::string generateWord(enCharType charType, int short length){
+
+std::string generateWord(enCharType charType, short int length){
 
 	std::string word = "";
 
-	for(int i = 1; i <= length; ++i){
+	for(int i = 1; i <=  length; i++){
 		word = word + getRandomCharacter(charType);
-
 	}
 
 	return word;
 }
 
 
-std::string generateKey(){
-
+std::string generateKey(int lengthOfKey){
 	std::string key = "";
-
-	key = generateWord(enCharType::capitalLetter, 4) + "-";
-	key = key + generateWord(enCharType::capitalLetter, 4) + "-";
-	key = key + generateWord(enCharType::capitalLetter, 4) + "-";
-	key = key + generateWord(enCharType::capitalLetter, 4);
+	
+	for(int i = 1; i <= lengthOfKey; ++i){
+		key = key + generateWord(enCharType::capitalLetter, 4);
+		if(i != lengthOfKey){
+			key = key + "-";
+		}
+	}
 
 	return key;
-
 }
 
-void generateKeys(int short numberOfKeys){
-	
-	std::cout << "********************************************\n";
+void generateKeys(short int numberOfKeys){
+
+	std::cout << "*********************************\n";
 
 	for(int i = 1; i <= numberOfKeys; ++i){
-		std::cout << "Key [" << i << "]: " << generateKey() << std::endl;
-
+		std::cout << "key[" << i << "]: " << generateKey(4) << std::endl;
 	}
 }
 
+
+
+
 int main(){
+
 	srand((unsigned)time(NULL));
 
-	generateKeys(readPositiveNumber("Enter how many keys to generates, Please?"));	
+	generateKeys(readPositiveNumber("Enter how many keys to generates, Please?"));
 
 	return 0;
-
 }
+
