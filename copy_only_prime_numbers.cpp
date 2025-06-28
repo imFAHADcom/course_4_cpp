@@ -66,7 +66,7 @@ void printArray(int array1[100], int array1Length){
 
 enPrimeNotPrime checkPrime(int number){
 
-    int m = round(number / 2);
+    int m = floor(sqrt(number)); 
 
 	for(int i = 2; i <= m; ++i){
 		if(number % i == 0){
