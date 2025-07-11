@@ -22,7 +22,6 @@ Array elements after shuffle:
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#include <cmath>
 
 int readPositiveNumber(std::string message){
 	int number = 0;
