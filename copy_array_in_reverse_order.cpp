@@ -30,7 +30,7 @@ void fillArrayWithRandomNumber(int array[100], int& arraylength){
 
 }
 
-void copyAndReverseArray(int arraySource[100],int arrayDestination[100], int arraylength){
+void copyArrayInReverseOrder(int arraySource[100],int arrayDestination[100], int arraylength){
 
 	for(int i = 0; i < arraylength; ++i){
 		arrayDestination[i] = arraySource[arraylength - 1 -i];
@@ -61,7 +61,7 @@ int main(){
 	std::cout << "\nArray 1 elements:\n";
 	printArray(array, arraylength);
 
-	copyAndReverseArray(array, array2, arraylength);
+	copyArrayInReverseOrder(array, array2, arraylength);
 	std::cout << "\nArray 2 elements after copying array 1 in reversed order:\n";
 	printArray(array2, arraylength);
 
