@@ -18,7 +18,7 @@ Array[4] : MATF-PRQA-PQEQ-TRIM
 #include <iostream>
 #include <string>
 #include <cstdlib>
-
+#include <ctime>
 
 enum enCharType{
 	DIGIT = 1,
