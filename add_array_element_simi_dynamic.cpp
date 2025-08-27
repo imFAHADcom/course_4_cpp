@@ -30,13 +30,13 @@ unsigned short readPositiveNumber(std::string message){
 	return number;
 }
 
-void addArrayElement(unsigned short number, int array[100], unsigned short& arrayLength){
+void addArrayElement(unsigned short number, unsigned short array[100], unsigned short& arrayLength){
 
 	arrayLength++;
 	array[arrayLength - 1] = number;
 }
 
-void inputUserNumbersInArray(int array[100], unsigned short& arrayLength){
+void inputUserNumbersInArray(unsigned short array[100], unsigned short& arrayLength){
 
 	bool addMore = true;
 
@@ -50,7 +50,7 @@ void inputUserNumbersInArray(int array[100], unsigned short& arrayLength){
 }
 
 
-void printArray(int array[100], unsigned short arrayLength){
+void printArray(unsigned short array[100], unsigned short arrayLength){
 	std::cout << "\n\nArray Length: " << arrayLength << "\n";
 	std::cout << "Array elements: ";
 
@@ -62,7 +62,7 @@ void printArray(int array[100], unsigned short arrayLength){
 	std::cout << std::endl;
 }
 int main(){
-	int array[100];
+	unsigned short array[100];
 	unsigned short arrayLength = 0;
  
 	inputUserNumbersInArray(array, arrayLength);
