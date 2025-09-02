@@ -67,9 +67,9 @@ void addArrayElement(unsigned short newNumber, unsigned short array[100], unsign
 }
 
 
-void copyArrayUsingaddArrayElement(unsigned short arraySource[100], unsigned short arrayDestination[100], unsigned short arrayLength, unsigned short arrayDestinationLength){
+void copyArrayUsingaddArrayElement(unsigned short arraySource[100], unsigned short arrayDestination[100], unsigned short arraySourceLength, unsigned short arrayDestinationLength){
 
-		for(unsigned short i = 0; i < arrayLength; ++i){
+		for(unsigned short i = 0; i < arraySourceLength; ++i){
 			addArrayElement(arraySource[i],arrayDestination, arrayDestinationLength);
 		}
 
