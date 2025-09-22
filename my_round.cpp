@@ -57,8 +57,7 @@ float getFractionPart(float number){
 
 int myRound(float number){
 
-	int intPart; 
-	intPart = int(number);
+	int intPart = int(number);
 
 	float fractionPart = getFractionPart(number);
 
