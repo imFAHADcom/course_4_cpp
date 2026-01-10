@@ -52,7 +52,7 @@ struct stGameResults{
 
 // ---------- Utility Functions ----------
 
-int randomNumber(short int from, short int to){
+short int randomNumber(short int from, short int to){
 
 	short int randNum = rand() % (to - from + 1) + from;
 
