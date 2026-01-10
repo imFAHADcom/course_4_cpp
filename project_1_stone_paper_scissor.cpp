@@ -21,10 +21,11 @@ Requirements:
 #include <ctime>
 
 
+// ---------- Data Definition ----------
+
 constexpr int MIN_SIZE = 1;
 constexpr int MAX_SIZE = 10;
 
-// ---------- Data Definition ----------
 
 enum enGameChoice{ STONE = 1, PAPER = 2, SCISSORS = 3 };
 enum enWinner{ PLAYER1 = 1, COMPUTER = 2, DRAW = 3 };
