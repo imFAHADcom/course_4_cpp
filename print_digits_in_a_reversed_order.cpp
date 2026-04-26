@@ -33,7 +33,9 @@ void printDigits(int number){
 	int remainder = 0;
 
 	while(number > 0){
-	
+
+//		remainder = number - ((number / 10) * 10); // The complete mathematical process for finding the remainder instead of using %
+
 		remainder = number % 10;
 		number = floor(number / 10); // floor() This function is used to round a number to the nearest integer, becouse 1234 / 10 = 123.4
 
