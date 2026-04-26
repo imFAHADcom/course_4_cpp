@@ -39,8 +39,9 @@ void printDigits(int number){
 		remainder = number % 10;
 		number = floor(number / 10); // floor() This function is used to round a number to the nearest integer, becouse 1234 / 10 = 123.4
 
-		std::cout << remainder << std::endl;
+		std::cout << remainder; 
 	}
+	std::cout << std::endl;
 }
 
 int main(){
